@@ -33,17 +33,17 @@
 
     <?php
        echo "<h2>Your Input:</h2>";
-       echo $arg1;
+       echo "<p>$arg1</p>";
        echo "<br>";
        
        echo "<h2>C Program Output:</h2>";
        foreach ($output as $line) {
-         echo $line;
+         echo "<p>$line</p>";
          echo "<br>";
        }
        
        echo "<h2>C Program Return Code:</h2>";
-       echo $retc;
+       echo <p>$retc</p>;
       
      ?>
     
