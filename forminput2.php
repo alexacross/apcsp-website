@@ -12,10 +12,11 @@
 
     <?php
        // define variables and set to empty values
-       $arg1 = $output = $retc = "";
+       $arg1 = $arg2 = $output = $retc = "";
 
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
+	 $arg2 = test_input($_POST["arg2"]);
          exec("/usr/lib/cgi-bin/student3/compguess " . $arg1, $output, $retc); 
        }
 
