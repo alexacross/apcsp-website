@@ -4,11 +4,10 @@
     <title>Form Input 2</title>
   </head>
 
-
   <body>
 
     <h1>Form Input 2</h1>
-    <p>blah blah blah</p>
+    <p>Demo of how to take form input and pass it to a C program - all in a single page</p>
 
     <?php
        // define variables and set to empty values
@@ -16,8 +15,8 @@
 
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
-	 $arg2 = test_input($_POST["arg2"]);
-         exec("/usr/lib/cgi-bin/student3/compguess " . $arg1, $output, $retc); 
+         $arg2 = test_input($_POST["arg2"]);
+         exec("/usr/lib/cgi-bin/student3/rpi3 " . $arg1 . " " . $arg2, $output, $retc); 
        }
 
        function test_input($data) {
@@ -30,6 +29,7 @@
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Arg1: <input type="text" name="arg1"><br>
+      Arg2: <input type="text" name="arg2"><br>
       <input type="submit">
     </form>
 
