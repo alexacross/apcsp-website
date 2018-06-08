@@ -36,7 +36,7 @@
        echo "<h2>Enter Secret Number Here:</h2>";
        echo "<p>$arg1<p>";
        echo "<br>";
-       echo "<h2>Guesses::</h2>";
+       echo "<h2>Guesses:</h2>";
        foreach ($output as $line) {
          echo "<p>$line</p>";
          echo "<br>";
