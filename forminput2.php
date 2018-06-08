@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Form Input 2</title>
+    <title>Computer Search</title>
   </head>
 
       
   </body>
-    <h1>Form Input 2</h1>
-    <p>Demo of how to take form input and pass it to a C program - all in a single page</p>
+    <h1>Computer Guess!</h1>
+    <p>Select a secret number from the following list for the computer to guess: 1, 3, 6, 7, 12, 14, 15, 16, 25, 33, 34, 35, 37, 42, 43, 46, 48, or 49.</p>
 
     <?php
        // define variables and set to empty values
@@ -29,7 +29,6 @@
     
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Arg1: <input type="text" name="arg1"><br>
-      Arg2: <input type="text" name="arg2"><br>
       <input type="submit">
     </form>
 
