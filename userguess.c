@@ -2,21 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-void userguess(int i, int a) {
-	if ( i == a )
-		printf("Your guess is correct! The secret number is %d\n", a);
-	else if (i > a )
-		printf("Too high. Guess again.\n");
-	else if ( i < a )
-		printf("Too low. Guess again.\n");
-}
-
-void randomnumber(int* a)
-{
-	srand(time(NULL));
-	*a = rand() % 24+1;
-}
-
 int main(int argc, char* argv[])
 {
 	int input;
@@ -31,12 +16,20 @@ int main(int argc, char* argv[])
 	}
 
 	int a;
+	int* a;
+	srand(time(NULL));
+	*a = rand() %24+1;
+
 	int i;
-	randomnumber(&a);
 	printf("Guess a number from 1-24\n";
 	while (i != a) {
 		scanf("%d", &i);
-		userguess(i,a);
+		if ( i == a )
+			print("Your guess is correct! The secret number is %d\n", a);
+		else if ( i > a )
+			printf("Too high. Guess again.\n");
+		else if ( i < a )
+			printf("Too low. Guess again.\n");
 	}
 	return 0;
 }
