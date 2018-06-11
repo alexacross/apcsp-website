@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Form Input 2</title>
+    <title>User Guess</title>
   </head>
 
 
   </body>
 
-    <h1>Suer Guess!</h1>
+    <h1>User Guess!</h1>
     <p>Guess the computer's secret number between 1 and 24</p>
 
     <?php
@@ -38,9 +38,8 @@
        echo "<p>$arg1<p>";
        echo "<br>";
        echo "<h2>Guesses:</h2>";
-       echo "<h2>C Program Output (an array):</h2>";
        foreach ($output as $line) {
-         echo <p>$line</p>;
+         echo "<p>$line</p>";
          echo "<br>";
        }
        

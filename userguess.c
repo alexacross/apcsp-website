@@ -1,4 +1,4 @@
-#include <stdio.>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -16,16 +16,15 @@ int main(int argc, char* argv[])
 	}
 
 	int a;
-	int* a;
+	int* ptra = &a;
 	srand(time(NULL));
-	*a = rand() %24+1;
+	*ptra = rand() % 24+1;
 
 	int i;
-	printf("Guess a number from 1-24\n";
 	while (i != a) {
 		scanf("%d", &i);
 		if ( i == a )
-			print("Your guess is correct! The secret number is %d\n", a);
+			printf("Your guess is correct! The secret number is %d\n", a);
 		else if ( i > a )
 			printf("Too high. Guess again.\n");
 		else if ( i < a )
