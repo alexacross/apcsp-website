@@ -22,11 +22,11 @@ int main() {
         }
 
 FILE* output;
-output = fopen("output.out","w");
+output = fopen("output.html","w");
 if (output == NULL) {
 	printf("error - failed to oepn file for writing\n");
 	return 1;
 }
-fprintf(output, "The correct guess is %d",a);
+fprintf(output, "Your guess was correct! The secret number is %d\n",a);
 fclose(output);
 }
