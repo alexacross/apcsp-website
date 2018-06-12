@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 int main() {
         int input;
                 printf("Guess a secret number between 1-24");
@@ -21,7 +22,7 @@ int main() {
         }
 
 FILE* output;
-output = fopen("output","w");
+output = fopen("output.out","w");
 if (output == NULL) {
 	printf("error - failed to oepn file for writing\n");
 	return 1;
